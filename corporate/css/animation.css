@@ -1,0 +1,30 @@
+/* ================= Animation hooks ================= */
+
+/* キャッチ表示 */
+.hero-catchcopy{
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .hero-catchcopy.is-show{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* セクション：順に浮かび上がる（JSでis-show付与） */
+  .section{
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .section.is-show{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* 初期はmain触れない（演出中の誤操作防止） */
+  body.is-off .main{
+    pointer-events: none;
+  }
+  body.is-on .main{
+    pointer-events: auto;
+  }
+  

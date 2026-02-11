@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AKARI WORKS株式会社</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/animation.css" />
+
+  <!-- JS-->
+  <script defer src="js/main.js"></script>
+  <script defer src="js/hero.js"></script>
+</head>
+
+<body class="is-off">
+
+
+  <!-- ================= Header ================= -->
+
+  <header class="header">
+
+    <div class="header-inner">
+
+      <h1 class="site-logo">
+        AKARI WORKS
+      </h1>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#works">施工事例</a></li>
+          <li><a href="#products">製品紹介</a></li>
+          <li><a href="#company">会社概要</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= Hero ================= -->
+
+  <section id="hero" class="hero">
+
+    <div class="hero-bg">
+      <!-- JSで背景切り替え -->
+    </div>
+
+    <div class="hero-content">
+
+      <h2 class="hero-title">
+        AKARI WORKS株式会社
+      </h2>
+
+      <button id="lightBtn" class="light-btn">
+        Light Up
+      </button>
+
+      <p class="hero-catchcopy">
+        暗い夜、明かりが灯るとホッとするように、<br>
+        あなたの身近で安心を灯す存在でありたい。
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= Main ================= -->
+
+  <main class="main">
+
+
+    <!-- ===== Works ===== -->
+
+    <section id="works" class="section works">
+
+      <div class="section-inner">
+
+        <h2 class="section-title">
+          施工事例
+        </h2>
+
+        <div class="works-list">
+
+          <article class="work-item">
+            <img src="img/works/work01.jpg" alt="商業施設の照明施工事例">
+            <h3>商業施設照明</h3>
+            <p>大型ショッピングモールの照明設計</p>
+          </article>
+
+          <article class="work-item">
+            <img src="img/works/work02.jpg" alt="オフィス照明施工事例">
+            <h3>オフィス照明</h3>
+            <p>快適なワークスペースの演出</p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== Products ===== -->
+
+    <section id="products" class="section products">
+
+      <div class="section-inner">
+
+        <h2 class="section-title">
+          製品紹介
+        </h2>
+
+        <div class="products-list">
+
+          <article class="product-item">
+            <img src="img/products/lamp01.jpg" alt="LEDデスクライト">
+            <h3>LEDデスクライト</h3>
+            <p>目に優しい高性能ライト</p>
+          </article>
+
+          <article class="product-item">
+            <img src="img/products/lamp02.jpg" alt="間接照明スタンド">
+            <h3>間接照明スタンド</h3>
+            <p>空間を彩る間接照明</p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== Company ===== -->
+
+    <section id="company" class="section company">
+
+      <div class="section-inner">
+
+        <h2 class="section-title">
+          会社概要
+        </h2>
+
+        <table class="company-table">
+
+          <tr>
+            <th>会社名</th>
+            <td>AKARI WORKS株式会社</td>
+          </tr>
+
+          <tr>
+            <th>設立</th>
+            <td>2010年4月</td>
+          </tr>
+
+          <tr>
+            <th>所在地</th>
+            <td>東京都〇〇区〇〇1-2-3</td>
+          </tr>
+
+          <tr>
+            <th>事業内容</th>
+            <td>照明設計・製造・販売</td>
+          </tr>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== Contact ===== -->
+
+    <section id="contact" class="section contact">
+
+      <div class="section-inner">
+
+        <h2 class="section-title">
+          お問い合わせ
+        </h2>
+
+        <form class="contact-form">
+
+          <div class="form-group">
+            <label>お名前</label>
+            <input type="text" name="name">
+          </div>
+
+          <div class="form-group">
+            <label>メール</label>
+            <input type="email" name="email">
+          </div>
+
+          <div class="form-group">
+            <label>内容</label>
+            <textarea name="message"></textarea>
+          </div>
+
+          <button type="submit">
+            送信する
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ================= Footer ================= -->
+
+  <footer class="footer">
+
+    <p>
+      © 2026 AKARI WORKS Inc.
+    </p>
+
+  </footer>
+
+
+</body>
+</html>

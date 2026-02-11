@@ -1,0 +1,38 @@
+/* ================= Base ================= */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+:root{
+  --navy: #0b1b3a;        /* メイン：ネイビー */
+  --gold: #d6b25e;        /* 文字：黄金色 */
+  --gold-2: #f2d98a;      /* ハイライト用 */
+  --bg-dark: #070b14;     /* 初期の暗さ */
+  --bg-light: #0b1226;    /* 点灯後の下地 */
+
+  
+  --shadow: rgba(0, 0, 0, 0.45);
+  --shadow-soft: rgba(0, 0, 0, 0.25);
+
+  --radius: 16px;
+  --maxw: 980px;
+}
+
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  line-height: 1.7;
+  background: var(--bg-dark);
+  color: var(--gold);
+  overflow-x: hidden;
+}
+
+/* 画像のデフォルト */
+img{ max-width: 100%; display: block; }
+
+/* リンク */
+a{ color: inherit; text-decoration: none; }
+
+/* フォーム */
+input, textarea, button{ font: inherit; color: inherit; }
+button{ border: none; background: none; cursor: pointer; }

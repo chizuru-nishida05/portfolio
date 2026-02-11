@@ -1,0 +1,87 @@
+/* ================= Hero ================= */
+
+.hero{
+    position: relative;
+    min-height: 100vh;
+    padding-top: 64px; /* header分 */
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  /* 背景*/
+  .hero-bg{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  
+    /* 暗い状態（初期） */
+    background:
+      radial-gradient(1200px 600px at 50% 30%, rgba(214,178,94,0.08), transparent 60%),
+      linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.40)),
+      url("../img/hero/dark.jpg") center/cover no-repeat;
+    filter: saturate(0.95);
+    transition: filter .9s ease, opacity .9s ease;
+  }
+  
+  /* 点灯後（画像差し替え） */
+  body.is-on .hero-bg{
+    background:
+      radial-gradient(1200px 600px at 50% 30%, rgba(214,178,94,0.22), transparent 60%),
+      linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.12)),
+      url("../img/hero/light.jpg") center/cover no-repeat;
+    filter: saturate(1.05);
+  }
+  
+  .hero-content{
+    position: relative;
+    z-index: 1;
+    width: min(920px, 92vw);
+    padding: 56px 18px 40px;
+    display: grid;
+    gap: 18px;
+    place-items: center;
+  }
+  
+  .hero-title{
+    font-size: clamp(34px, 4.8vw, 56px);
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+    color: var(--gold-2);
+  
+    
+    text-shadow:
+      0 18px 45px rgba(0,0,0,0.55),
+      0 6px 18px rgba(0,0,0,0.35);
+  }
+  
+  
+  
+  /* ボタン */
+  .light-btn{
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: rgba(11,27,58,0.55);
+    border: 1px solid rgba(214,178,94,0.45);
+    color: var(--gold-2);
+    box-shadow: 0 18px 40px var(--shadow-soft);
+    transition: transform .15s ease, background .2s ease, border-color .2s ease;
+  }
+  .light-btn:hover{
+    background: rgba(11,27,58,0.75);
+    border-color: rgba(242,217,138,0.65);
+    transform: translateY(-1px);
+  }
+  .light-btn:disabled{
+    opacity: 0.45;
+    cursor: default;
+  }
+  
+  /* キャッチ */
+  .hero-catchcopy{
+    max-width: 44rem;
+    opacity: 0;
+    transform: translateY(14px);
+    color: rgba(242,217,138,0.92);
+  }
+  

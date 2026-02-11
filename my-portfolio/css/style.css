@@ -1,0 +1,262 @@
+:root{
+    --bg:#ffffff;
+    --sub-bg:#f5f7f8;      /* 白＋薄いブルーグレー */
+    --text:#2f3a44;
+    --sub:#5f7f94;         /* ブルーグレー */
+    --border:#d7dee3;
+  }
+  
+  /* ===== Reset/No-underline (変な下線の根絶) ===== */
+  *{ box-sizing:border-box; }
+  a, a:visited, a:hover, a:active{
+    text-decoration:none !important;
+    border:none !important;
+  }
+  
+  /* ===== Base ===== */
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.75;
+    font-family:
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      "Noto Sans JP",
+      sans-serif;
+  }
+  
+  h1,h2{
+    font-family:
+      "Hiragino Mincho ProN",
+      "Yu Mincho",
+      serif;
+    font-weight:500;
+    letter-spacing:.06em;
+    margin:0;
+  }
+  
+  a{ color:var(--sub); }
+  a:hover{ opacity:.75; }
+  
+  /* ===== Hero ===== */
+  .hero{
+    height:100vh;
+    padding:40px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+  
+    /* 背景画像は最終でここを差し替え */
+    /* background-image:url("../img/hero.jpg"); */
+    background-size:cover;
+    background-position:center;
+  }
+  
+  .hero-left h1{
+    font-size:48px;
+  }
+  
+  /* ナビ：項目は横並び */
+  .hero-nav-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    gap:18px;
+  }
+  .hero-nav-item{ margin:0; }
+  
+  /* 文字を「縦に積む」＝回転しない縦 */
+  .nav-stack{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:2px;
+  
+    padding:8px 6px;          /* クリック範囲 */
+    border-radius:10px;
+    color:var(--text);
+  }
+  .nav-stack:hover{
+    background:rgba(95,127,148,.12);
+    opacity:1;
+  }
+  .nav-stack span{
+    display:block;
+    line-height:1;
+    letter-spacing:0;
+  }
+  
+  /* ===== Sections ===== */
+  section{
+    padding:90px 10%;
+  }
+  
+  .about,
+  .works{
+    background:var(--sub-bg);
+  }
+  
+  /* 箱は中央、文章は左寄せ（要求どおり） */
+  .content-box{
+    max-width:720px;
+    margin:0 auto;
+    width:100%;
+    text-align:left;
+  }
+  
+  .section-title{
+    text-align:center;
+    margin:0 0 28px;
+  }
+  
+  .section-text{
+    margin:0 0 24px;
+  }
+  
+  /* ===== About：2カラム（左：文章 / 右：画像） ===== */
+  .about-grid{
+    display:grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap:28px;
+    align-items:start;
+  }
+  
+  /* ===== Image placeholders ===== */
+  .image-placeholder{
+    width:100%;
+    aspect-ratio: 1 / 1;
+    border:1px solid var(--border);
+    border-radius:12px;
+    background:#ffffff;
+  }
+  
+  /* Worksの画像は横長っぽく見せる（後で画像差し替え可） */
+  .work-image .image-placeholder{
+    aspect-ratio: 16 / 9;
+    margin-bottom:18px;
+  }
+  
+  .company-name{
+    text-align:center;
+    margin:0 0 18px;
+    letter-spacing:.06em;
+  }
+  
+  /* ボタンは中央（要求どおり） */
+  .btn{
+    display:block;
+    width:fit-content;
+    margin:26px auto 0;
+  
+    padding:10px 26px;
+    border:1px solid var(--sub);
+    border-radius:999px;
+    font-size:14px;
+    letter-spacing:.04em;
+    color:var(--sub);
+  }
+  
+  /* ===== Footer ===== */
+  .footer{
+    padding:40px 10%;
+    text-align:center;
+    background:var(--bg);
+    border-top:1px solid var(--border);
+  }
+  
+  .footer-contact{
+    display:inline-block;
+    padding:8px 12px;      /* クリック範囲 */
+    color:var(--sub);
+  }
+  
+  .footer-mail{
+    margin-top:8px;
+    color:var(--sub);
+    font-size:13px;
+  }
+  
+ /* ===== TOP Works ===== */
+
+.works .work-image{
+    text-align: center;   
+  }
+  
+  .works .work-image a{
+    display: inline-block; 
+  }
+  
+  .works .work-image img{
+    width: 55%;
+    max-width: 800px;
+    height: auto;
+    display: block;       
+    margin: 0 auto;       
+    border-radius: 12px;
+  }
+  
+  /* ===== TOP About 右画像 はみ出し防止 ===== */
+
+.about .about-image img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+
+  /* ===== TOP Hero 背景画像 ===== */
+
+.hero{
+    background-image: url("../img/hero-top.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* ===== TOP About 調整（文字サイズ/太さ・縦中央・More位置） ===== */
+
+/* About内の見出し＋文章を少し太く大きく */
+.about .section-title{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .about .section-text{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* 右画像に対して左テキストの縦位置を中央に */
+  .about .about-grid{
+    align-items: stretch; 
+  }
+  
+  .about .about-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  }
+  
+  /* Moreボタンを画像の下端ラインに合わせる（下に押し下げる） */
+  .about .about-text .btn{
+    margin-top: auto;      
+    margin-left: 0;      
+    margin-right: 0;
+    align-self: flex-start;
+  }
+  
+
+  /* ===== Hero サブコピー ===== */
+
+.hero-sub{
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .08em;
+    color: rgba(255,255,255,0.6); /* 薄く */
+  }
+  

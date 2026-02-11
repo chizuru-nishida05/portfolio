@@ -1,0 +1,102 @@
+/* ===== About Page Only ===== */
+
+
+  
+  
+  /* ナビ */
+  
+  .page-nav a{
+    margin: 0 12px;
+    font-size: 14px;
+  }
+  
+  
+  /* メイン */
+  
+  .about-main{
+    max-width: 720px;
+    margin: 0 auto;
+  
+    padding: 60px 10% 80px;
+  }
+  
+  
+  
+  
+  /* スキル */
+  
+  .skill-list{
+    padding-left: 18px;
+  }
+  
+  .skill-list li{
+    margin-bottom: 6px;
+  }
+  
+  
+  /* 戻る */
+  
+  .back-home{
+    margin-top: 60px;
+    text-align: center;
+  }
+  
+  .back-home a{
+    font-size: 14px;
+  }
+  
+
+ /* ===== About 強制リセット（検証用） ===== */
+
+.about-main .about-section{
+    margin-bottom: 16px !important;
+  }
+  
+  .about-main .about-section h2{
+    margin-bottom: 4px !important;
+  }
+  
+  .about-main .about-section p,
+  .about-main .about-section ul{
+    margin: 0 !important;
+  }
+  
+/* ===== About：項目間の余白を詰める（上書き） ===== */
+
+.about-main{
+    padding-top: 40px;     /* 上が空きすぎなら詰める */
+    padding-bottom: 60px;
+  }
+  
+  .about-section{
+    margin: 0 0 20px;      /* ← ここが項目間の間隔 */
+  }
+  
+  .about-section:last-of-type{
+    margin-bottom: 0;
+  }
+  
+  .about-section h2{
+    margin: 0 0 8px;       /* 見出しと本文の間 */
+  }
+  
+  .about-section p,
+  .about-section ul{
+    margin: 0;
+  }
+  
+  .about-main .about-section{
+    margin-bottom: 20px !important;
+  }
+  
+  .about-main .about-section h2{
+    margin: 0 0 8px !important;
+  }
+  
+  .about-main .about-section p,
+  .about-main .about-section ul{
+    margin: 0 !important;
+  }
+  
+
+

@@ -1,0 +1,293 @@
+/* ================= Layout ================= */
+
+.header,
+.hero,
+.main,
+.footer{
+  text-align: center;
+}
+
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 64px;
+    z-index: 50;
+    background: rgba(11, 27, 58, 0.55);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(214, 178, 94, 0.25);
+  }
+  
+  .header-inner{
+    max-width: var(--maxw);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 18px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* ここで中央寄せ */
+    gap: 18px;
+  }
+  
+  .site-logo{
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    font-size: 14px;
+  }
+  
+  .nav ul{
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+  }
+  
+  .nav a{
+    padding: 8px 10px;
+    border-radius: 999px;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .nav a:hover{
+    background: rgba(214, 178, 94, 0.12);
+    transform: translateY(-1px);
+  }
+  
+  /* mainの上にヘッダー分 */
+  .main{ padding-top: 64px; }
+  
+
+.header-inner{
+  max-width: var(--maxw);
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px 18px;
+  display: grid;          
+  place-items: center;  
+  gap: 8px;
+}
+
+.site-logo{
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  font-size: 14px;
+}
+
+/* ナビ */
+.nav ul{
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center; /* 中央寄せ */
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+.nav a{
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: background .2s ease, transform .2s ease;
+}
+.nav a:hover{
+  background: rgba(214, 178, 94, 0.12);
+  transform: translateY(-1px);
+}
+
+/* mainの上にヘッダー分の余白 */
+.main{
+  padding-top: 88px;
+}
+
+/* セクション */
+.section{
+  padding: 84px 18px;
+}
+
+.section-inner{
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.section-title{
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+  color: var(--gold);
+}
+
+/* テキスト */
+.section p,
+.section li,
+.section td,
+.section th{
+  color: rgba(214,178,94,0.92);
+}
+
+/* フッター */
+.footer{
+  padding: 40px 18px 60px;
+  color: rgba(214,178,94,0.75);
+}
+
+/* ヘッダー：初期は隠す */
+.header{
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  
+  /* 点灯後に表示 */
+  body.is-on .header{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  /* ================= Company（会社概要） ================= */
+
+.company-table{
+    margin: 0 auto;              /* 表そのものを中央 */
+    border-collapse: collapse;
+    min-width: 320px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .company-table th,
+.company-table td{
+  padding: 12px 16px;
+  border: 1px solid rgba(11,27,58,0.25);
+  text-align: center;
+
+  background: #ffffff;   /* ← 白 */
+  color: #111;           /* ← 黒文字 */
+}
+
+  
+  
+
+  /* ================= Contact（お問い合わせ） ================= */
+
+.contact-form{
+    max-width: 520px;     /* 横幅を固定 */
+    margin: 0 auto;       /* 中央寄せ */
+    display: grid;
+    gap: 16px;
+  }
+  
+  /* 各入力ブロック */
+  .form-group{
+    display: grid;
+    gap: 6px;
+    text-align: center;
+  }
+  
+  /* 入力欄を全部同じサイズに */
+  .contact-form input,
+.contact-form textarea{
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(11,27,58,0.35);
+
+  background: #ffffff;   /* ← 白 */
+  color: #111;           /* ← 黒文字 */
+
+  resize: vertical;
+}
+
+  
+  /* フォーカス時 */
+  .contact-form input:focus,
+  .contact-form textarea:focus{
+    outline: none;
+    border-color: var(--gold-2);
+    box-shadow: 0 0 0 2px rgba(214,178,94,0.2);
+  }
+  
+  /* 送信ボタン */
+  .contact-form button{
+    margin-top: 10px;
+    padding: 12px 0;
+    border-radius: 999px;
+    background: rgba(11,27,58,0.65);
+    border: 1px solid rgba(214,178,94,0.45);
+    color: var(--gold-2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    transition: transform .15s ease, background .2s ease;
+  }
+  
+  .contact-form button:hover{
+    background: rgba(11,27,58,0.85);
+    transform: translateY(-1px);
+  }
+  
+  /* ================= Cards (Works / Products) ================= */
+
+.works-list,
+.products-list{
+  max-width: var(--maxw);
+  margin: 28px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* スマホは1列 */
+@media (max-width: 720px){
+  .works-list,
+  .products-list{
+    grid-template-columns: 1fr;
+  }
+}
+
+.work-item,
+.product-item{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(214,178,94,0.18);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+/* 画像の枠を固定 */
+.work-item img,
+.product-item img{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: #ffffff;       
+}
+
+/* タイトルと本文 */
+.work-item h3,
+.product-item h3{
+  margin-top: 14px;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  color: var(--gold-2);
+}
+
+.work-item p,
+.product-item p{
+  padding: 8px 14px 16px;
+  color: rgba(214,178,94,0.92);
+  font-size: 14px;
+}
+
+.work-item.no-img::before,
+.product-item.no-img::before{
+  content: "IMAGE";
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  background: #ffffff;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}

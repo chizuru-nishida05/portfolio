@@ -1,0 +1,120 @@
+/* ===== Works Page Only ===== */
+
+.works-main{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 10% 80px;
+  }
+  
+  
+  /* 画像＋テキスト横並び */
+  
+  .work-row{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  
+    margin-bottom: 80px;
+  }
+  
+  .work-row.reverse{
+    flex-direction: row-reverse;
+  }
+  
+  
+  .work-image{
+    flex: 1;
+  }
+  
+  .work-text{
+    flex: 1;
+  }
+  
+  
+  .work-image .image-placeholder{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+  }
+  
+  
+  /* 裏話 */
+  
+  .behind{
+    max-width: 720px;
+    margin: 0 auto 60px;
+    text-align: left;
+  }
+  
+  .behind h2{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  /* 戻る */
+  
+  .back-home{
+    text-align: center;
+  }
+  
+  /* ===== Works：共通（高さ揃え） ===== */
+
+.work-row{
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+  
+  .work-image,
+  .work-text{
+    flex: 1;
+    display: flex;
+    align-items: center; /* 文章も画像も縦中央 */
+  }
+  
+  /* 共通：画像は「枠に収める」だけ */
+  .work-img{
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* ===== 個別：サイズ指定 ===== */
+  
+  /* 1枚目：横長想定 */
+  .img-1{
+    max-width: 350px;
+    max-height: 350px;  
+    width: auto;
+  }
+  
+  
+  /* 2枚目：標準 */
+  .img-2{
+    max-width: 600px;
+  }
+  
+  /* 3枚目：縦長（高さ基準で揃える） */
+  .img-3{
+    max-width: 600px;  
+    max-height: 320px;  
+    width: auto;        
+  }
+  
+  
+  /* ===== Works トップキャプション ===== */
+
+.works-caption{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 60px;
+  }
+  
