@@ -260,3 +260,29 @@
     color: rgba(255,255,255,0.6); /* 薄く */
   }
   
+  @media (max-width: 768px){
+
+    .about .about-grid{
+      grid-template-columns: 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+  
+    .about .about-image{
+      order: -1;
+    }
+  
+    .about .about-image img{
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      max-height: 320px;
+    }
+  
+    .about .about-text .btn{
+      margin-top: 18px;
+      align-self: flex-start;
+    }
+  }
+  

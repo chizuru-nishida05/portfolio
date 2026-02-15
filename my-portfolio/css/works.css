@@ -118,3 +118,45 @@
     margin-bottom: 60px;
   }
   
+  @media (max-width: 768px){
+
+    .works-main{
+      padding: 40px 6% 60px;
+    }
+  
+    .work-row{
+      flex-direction: column;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 56px;
+    }
+  
+    .work-row.reverse{
+      flex-direction: column;
+    }
+  
+    .work-image{
+      order: -1;
+    }
+  
+    .work-image,
+    .work-text{
+      display: block;
+    }
+  
+    .work-img{
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+  
+    .img-1,
+    .img-2,
+    .img-3{
+      width: 100%;
+      max-width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+    }
+  }
+  
